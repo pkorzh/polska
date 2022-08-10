@@ -1,0 +1,20 @@
+.list {
+  &-item {
+    padding: 5px;
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+  }
+
+  &-item-btn {
+    padding: 0 10px 0 0;
+  }
+
+  &--group {
+    .list-item {
+      display: flex;
+      align-items: center;
+      line-height: 1.2;
+    }
+  }
+}

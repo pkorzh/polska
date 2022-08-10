@@ -1,0 +1,7 @@
+.main-layout {
+  overflow: hidden;
+  padding: 10px 5px;
+  @media (min-width: 680px) {
+    padding: 10px;
+  }
+}

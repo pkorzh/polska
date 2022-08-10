@@ -1,0 +1,17 @@
+//base
+@import './variables';
+@import './general';
+
+
+//components
+@import './components/button';
+@import './components/card';
+@import './components/list';
+@import './components/modal';
+@import './components/form';
+ @import './components/section';
+
+
+//layout
+@import './layout/details-layout';
+@import './layout/main-layout';

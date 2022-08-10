@@ -1,0 +1,30 @@
+.form {
+  &__area {
+    padding-bottom: 10px;
+  }
+
+  &__button {
+    text-align: right;
+    padding-top: 10px;
+  }
+
+  &__textarea {
+    width: 100%;
+    min-height: 100px;
+  }
+
+  &__submit {
+    border-radius: 20px;
+    height: 50px;
+    border: 0;
+    background: #007bff;
+    color: #fff;
+    min-width: 120px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+      background: #0054ff;
+    }
+  }
+}

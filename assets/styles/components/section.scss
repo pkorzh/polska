@@ -1,0 +1,168 @@
+.section {
+  margin: 20px 0 10px;
+
+  &__holder {
+    margin: 0 -5px;
+    display: flex;
+    flex-wrap: wrap;
+    > div {
+      padding: 5px;
+    }
+  }
+
+  &__card {
+    position: relative;
+  }
+
+  &__card-image {
+    width: 100%;
+  }
+
+  &--actors {
+    .section {
+      &__holder {
+        flex-wrap: nowrap;
+        overflow-y: hidden;
+        overflow-x: auto;
+        > div {
+          flex: 0 0 90px;
+        }
+      }
+      &__card-image {
+        height: 120px;
+        object-fit: cover;
+      }
+    }
+    .stretched-link {
+      &:hover::after {
+        background: none;
+      }
+    }
+  }
+
+  &--albums {
+    .section {
+      &__card {
+        overflow: hidden;
+        max-width: 90px;
+        @media (min-width: 680px) {
+          max-width: 130px;
+        }
+        .stretched-link {
+          &:hover::after {
+            background: none;
+          }
+        }
+      }
+      &__card-image {
+        border-radius: 10px;
+      }
+    }
+  }
+
+  &--locations {
+    .section {
+      &__card {
+        overflow: hidden;
+        border-radius: 10px;
+        max-width: 90px;
+        @media (min-width: 680px) {
+          max-width: 130px;
+        }
+        &:hover {
+          .stretched-link {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .stretched-link {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      font-weight: bold;
+      color: #000;
+      text-align: center;
+      padding: 5px;
+      font-size: 13px;
+    }
+  }
+
+  &--frames {
+    .section {
+      &__holder {
+        > div {
+          width: 33.33%;
+
+          @media (min-width: 680px) {
+            width: 25%;
+          }
+        }
+      }
+
+      &__card {
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0,0,0,.5);
+      }
+
+      &__card-image {
+        height: 80px;
+        object-fit: cover;
+
+        @media (min-width: 680px) {
+          height: 120px;
+        }
+      }
+    }
+  }
+
+  &--movies {
+    .section {
+      &__holder {
+        > div {
+          width: 50%;
+          @media (min-width: 480px) {
+            width: 33.33%;
+          }
+          @media (min-width: 680px) {
+            width: 25%;
+          }
+          @media (min-width: 800px) {
+            width: 20%;
+          }
+          @media (min-width: 1200px) {
+            width: 14.28%;
+          }
+        }
+      }
+    }
+
+    .card-image {
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+
+  &--photos {
+    .section {
+      &__holder {
+        > div {
+          width: 20%;
+          @media (min-width: 1200px) {
+            width: 14.28%;
+          }
+          @media (min-width: 1400px) {
+            width: 10%;
+          }
+        }
+      }
+    }
+  }
+}
