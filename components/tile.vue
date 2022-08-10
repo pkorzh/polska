@@ -1,12 +1,11 @@
 <template>
   <div
     class="card"
-    :class="tile.type"
   >
     <div class="card-image-holder">
       <n-link
         class="mask"
-        :to="{ name: 'tile-type-id', params: { type: tile.type, id: tile.id }}"
+        :to="{ name: 'tile-id', params: { id: tile.id }}"
       >
         <img class="card-image"
              :src="mediaUrl(tile)"
@@ -24,14 +23,12 @@
       </n-link>
 
 
-      <soundtracks :tile="tile" v-if="tile.type == 'album'" />
-
-      <socials :tile="tile" v-if="hasSocial(tile)" />
+      <!--<soundtracks :tile="tile" />-->
     </div>
 
     <div class="card-body">
       <div class="card-head">
-        <n-link :to="{ name: 'tile-type-id', params: { type: tile.type, id: tile.id }}" class="link">
+        <n-link :to="{ name: 'tile-id', params: { id: tile.id }}" class="link">
           <h5 class="card-title">{{ tile.display_name }}</h5>
         </n-link>
 
@@ -48,7 +45,6 @@
 <script>
 import tileOptionsModal from "./tileOptionsModal";
 import soundtracks from "./soundtracks";
-import socials from "./socials";
 
 import mediaUrlMixin from "@/mixins/mediaUrl";
 import {imgLoadingStatuses} from '@/utils';
@@ -57,7 +53,6 @@ export default {
   components: {
     tileOptionsModal,
     soundtracks,
-    socials
   },
   data: () => ({
     show: false,
@@ -67,9 +62,6 @@ export default {
   props: ["tile"],
   mixins: [mediaUrlMixin],
   methods: {
-    hasSocial(tile) {
-      return tile.facebook_id || tile.twitter_id || tile.instagram_id;
-    }
   }
 };
 </script>

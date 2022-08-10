@@ -86,7 +86,7 @@ export default {
     shareableUrl() {
       return `${location.protocol}//${location.hostname}${
         location.port ? ":" + location.port : ""
-      }/tile/${this.tile.type}/${this.tile.id}`;
+      }/tile/${this.tile.id}`;
     }
   },
   methods: {

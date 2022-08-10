@@ -35,7 +35,6 @@ export default {
       const data = await this.$axios.$get(`${process.env.apiRoot}/`, {
         params: { page: this.lastPage }
       });
-	  return;
       if (data.length) {
         this.tiles.push(...data);
         this.setLastPage(this.lastPage + 1);

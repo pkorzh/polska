@@ -118,7 +118,6 @@ import mediaUrlMixin from "@/mixins/mediaUrl";
 import soundtracks from "@/components/soundtracks";
 import tiles from "@/components/tiles.vue";
 import tileOptionsModal from "@/components/tileOptionsModal";
-import socials from "@/components/socials";
 import { imgLoadingStatuses } from "@/utils";
 
 export default {
@@ -196,7 +195,6 @@ export default {
   components: {
     tiles,
     tileOptionsModal,
-    socials,
     soundtracks
   },
   computed: {
