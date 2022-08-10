@@ -8,7 +8,6 @@
 
        <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-dropdown-item href="/tile/tag/genres">Genres</b-dropdown-item>
           <b-dropdown-item href="/faq">FAQ</b-dropdown-item>
         </b-navbar-nav>
        </b-collapse>
